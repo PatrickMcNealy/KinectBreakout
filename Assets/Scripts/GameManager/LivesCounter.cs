@@ -19,15 +19,15 @@ public class LivesCounter : MonoBehaviour
     {
         _lives--;
 
-        if(lives == 1)
+        if (lives == 1)
         {
             lifeMarkers[1].SetActive(false);
         }
-        else if(lives == 0)
+        else if (lives == 0)
         {
             lifeMarkers[0].SetActive(false);
         }
-        else if(lives == -1)
+        else if (lives == -1)
         {
             gameOverMenu.SetActive(true);
         }

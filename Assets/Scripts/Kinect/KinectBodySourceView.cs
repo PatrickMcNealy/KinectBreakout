@@ -85,7 +85,7 @@ public class KinectBodySourceView : MonoBehaviour
                 _Bodies.Remove(trackingId);
             }
         }
-        
+
         foreach (var body in data)
         {
             if (body == null)
@@ -142,15 +142,15 @@ public class KinectBodySourceView : MonoBehaviour
 
             Transform jointObj = bodyObject.transform.FindChild(jt.ToString());
             jointObj.localPosition = GetVector3FromJoint(sourceJoint);
-            
 
-            if(jt == rightHandJoint)
+
+            if (jt == rightHandJoint)
             {
                 handPosition = jointObj.position;
             }
         }
     }
-    
+
     private static Vector3 GetVector3FromJoint(Kinect.Joint joint)
     {
         return new Vector3(joint.Position.X * 10, joint.Position.Y * 10, joint.Position.Z * 10);

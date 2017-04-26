@@ -11,7 +11,7 @@ public class BrickManager : MonoBehaviour
 
     private void ResetBricks()
     {
-        for(int i = 0; i<bricks.Length; i++)
+        for (int i = 0; i < bricks.Length; i++)
         {
             bricks[i].SetActive(true);
         }
@@ -21,7 +21,7 @@ public class BrickManager : MonoBehaviour
     {
         for (int i = 0; i < bricks.Length; i++)
         {
-            if(bricks[i].activeSelf == true)
+            if (bricks[i].activeSelf == true)
             {
                 return;
             }

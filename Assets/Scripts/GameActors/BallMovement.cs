@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallMovement : MonoBehaviour {
+public class BallMovement : MonoBehaviour
+{
 
     float speed = 3f;
     Vector2 movement;
@@ -14,14 +15,16 @@ public class BallMovement : MonoBehaviour {
 
     float horizSpeedMultiplier = 1f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         rb = GetComponent<Rigidbody>();
         movement = new Vector2(speed, speed);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (transform.position.y < -2f)
         {
 
@@ -40,15 +43,15 @@ public class BallMovement : MonoBehaviour {
         }
 
         rb.velocity = movement;
-	}
-    
+    }
+
 
     public void Bounce(bool bounceHorizontal, int direction)
     {
         speed += 0.3f;
-        if(bounceHorizontal)
+        if (bounceHorizontal)
         {
-            movement = new Vector2(speed * direction * horizSpeedMultiplier,movement.y);
+            movement = new Vector2(speed * direction * horizSpeedMultiplier, movement.y);
         }
         else
         {

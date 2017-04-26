@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BounceBall: MonoBehaviour {
+public class BounceBall : MonoBehaviour
+{
 
     [SerializeField]
     bool isHorizontal;
